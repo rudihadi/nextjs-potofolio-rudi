@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { Typewriter } from "react-simple-typewriter";
 import { Cormorant_Garamond, Grechen_Fuemen } from "next/font/google";
 
 const cormorant = Cormorant_Garamond({
@@ -15,8 +18,18 @@ export default function Home() {
   return (
     <div className="justify-center content-center">
       <div className={`${grechen.className} justify-center`}>
-        <div className="font-bold text-center content-center text-6xl text-orange-500">
-          Hai <span>👋🏼</span>
+        <div className="font-bold text-center content-center text-3xl md:text-6xl text-orange-500">
+          {/* Hai <span>👋🏼</span> */}
+          <Typewriter
+            words={["Assalamualaikum", "Hai", "Welcome to my Portofolio"]}
+            // loop={0} // 0 = infinite loop
+            // cursor
+            // cursorStyle="|"
+            cursor={false}
+            typeSpeed={100}
+            deleteSpeed={80}
+            delaySpeed={1000}
+          />
         </div>
         <div className="flex justify-center my-6">
           <div
